@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 14:14:49 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/20 18:04:23 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/21 16:41:30 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	char 	*str;
 
-	str = malloc(strlen(s1) + strlen(s2) + 1);
+	str = malloc((strlen(s1) + strlen(s2) + 1)*sizeof(char));
 	if (!str)
 		return(NULL);
 	i = 0;
@@ -96,11 +96,31 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return(str);
 }
 
-/*char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
+	int		setlen;
+	int 	s1len;
+	int		i;
+	int		start;
+	int		end;
 
-	str = malloc(sizeof(s1));
-
-	return(str);
-}*/
+	setlen = strlen(set);
+	s1len = strlen(s1);
+	i = 0;
+	start = 0;
+	while (s1[i] == set[i] && set[i] )
+	{
+		if ( i == setlen - 1 )
+			start = setlen;
+		i++;			
+	}
+	i = setlen - 1;
+	end = 0;
+	while ( s1len > setlen && s1[i + s1len - setlen] == set[i])
+	{
+		if (i == 0)
+			end = setlen;
+		i--;
+	}
+	return(ft_substr(s1, start, s1len - start - end));
+}
