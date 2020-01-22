@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/20 17:21:41 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/21 17:07:26 by lfrasson         ###   ########.fr       */
+/*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
+/*   Updated: 2020/01/22 11:18:33 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	strlen(const char *s)
+char	**ft_split(char const *s, char c)
 {
-	size_t len;
+	char **strarray;
 
-	len = 0;
-	while (s[len])
-		len++;
-	return (len);
+	*strarray = malloc(char )
+
+	return (strarray);
 }
