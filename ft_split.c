@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/22 13:33:50 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/22 15:16:47 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int		ft_charindex(char const *s, unsigned int start, char c)
 			return (i);
 		i++;
 	}
-	return(i);
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)
@@ -49,31 +49,21 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 	int		start;
-	int		strlen;
 
 	strarray = NULL;
 	if (!(strarray = malloc(sizeof(char *) * ft_substrnbr(s, c))))
 		return (NULL);
 	start = 0;
-	i = 0;
-	while(strarray[i])
+	i = -1;
+	while (++i < ft_substrnbr(s, c))
 	{
-		ft_putnbr_fd(start, 1);
-		ft_putnbr_fd(ft_charindex(s, start, c), 1);
 		substr = ft_substr(s, start, ft_charindex(s, start, c) - start);
-		ft_putendl_fd(substr, 1);
-		strlen = ft_strlen(substr);
-		if (!(strarray[i] = malloc(sizeof(char) * strlen)))
+		if (!(strarray[i] = malloc(sizeof(char) * ft_strlen(substr))))
 			return (NULL);
-		j = 0;
-		while (substr[j])
-		{
+		j = -1;
+		while (substr[++j])
 			strarray[i][j] = substr[j];
-			j++;
-		}
-		ft_putendl_fd(strarray[i], 1);
-		start = start + strlen + 1;
-		i++;
+		start = start + j + 1;
 	}
 	return (strarray);
 }
