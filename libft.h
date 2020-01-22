@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 10:20:36 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/22 11:14:31 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/22 13:34:00 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char 	*ft_strtrim(char const *s1, char const *set);
-size_t	strlen(const char *s);
+size_t	ft_strlen(const char *s);
 char	**ft_split(char const *s, char c);
 
 #endif

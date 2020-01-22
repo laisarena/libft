@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:16:47 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/22 11:17:42 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/22 12:22:41 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
-	setlen = strlen(set);
-	s1len = strlen(s1);
+	setlen = ft_strlen(set);
+	s1len = ft_strlen(s1);
 	i = 0;
 	start = 0;
 	while (s1[i] == set[i] && set[i])

@@ -6,13 +6,13 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 17:21:41 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/21 17:07:26 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/22 12:21:47 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t len;
 
