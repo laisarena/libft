@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/22 11:02:10 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/23 15:17:42 by lfrasson         ###   ########.fr       */
+/*   Created: 2020/01/23 14:38:16 by lfrasson          #+#    #+#             */
+/*   Updated: 2020/01/23 15:13:04 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_bzero(void *s, size_t n)
 {
-	while (*s)
+	char *ptr;
+
+	ptr = s;
+	while (n > 0)
 	{
-		ft_putchar_fd(*s, fd);
-		s++;
+		*ptr = 0;
+		ptr++;
+		n--;
 	}
 }

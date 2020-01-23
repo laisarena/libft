@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/22 11:02:10 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/23 15:17:42 by lfrasson         ###   ########.fr       */
+/*   Created: 2020/01/23 11:45:21 by lfrasson          #+#    #+#             */
+/*   Updated: 2020/01/23 12:21:46 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+int	ft_tolower(int c)
 {
-	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }
