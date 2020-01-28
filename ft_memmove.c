@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:27:38 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/24 14:20:48 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/28 17:43:25 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char		*ptrdst;
-	const char	*ptrsrc;
+	char	temp[len];
 
-	ptrdst = dst;
-	ptrsrc = src;
-	while (len-- && *ptrdst && *ptrsrc)
-		*ptrdst++ = *ptrsrc++;
+	ft_memcpy(temp, src, len);
+	ft_memcpy(dst, temp, len);
 	return (dst);
 }

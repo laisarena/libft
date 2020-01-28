@@ -6,28 +6,24 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/01/28 13:25:41 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/01/28 16:57:02 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_strlcpy.c\
-	   ft_strlen.c\
-	   ft_strmapi.c\
+SRCS = ft_atoi.c\
 	   ft_bzero.c\
-	   ft_strncmp.c\
-	   ft_strnstr.c\
+	   ft_isalnum.c\
 	   ft_isalpha.c\
-	   ft_strrchr.c\
+	   ft_isascii.c\
+	   ft_isdigit.c\
+	   ft_isprint.c\
+	   ft_isspace.c\
 	   ft_itoa.c\
-	   ft_strtrim.c\
 	   ft_memchr.c\
-	   ft_substr.c\
 	   ft_memcmp.c\
-	   ft_tolower.c\
 	   ft_memcpy.c\
-	   ft_toupper.c\
 	   ft_memmove.c\
 	   ft_memset.c\
 	   ft_putchar_fd.c\
@@ -37,7 +33,17 @@ SRCS = ft_strlcpy.c\
 	   ft_split.c\
 	   ft_strchr.c\
 	   ft_strjoin.c\
-	   ft_strlcat.c
+	   ft_strlcat.c\
+	   ft_strlcpy.c\
+	   ft_strlen.c\
+	   ft_strmapi.c\
+	   ft_strncmp.c\
+	   ft_strnstr.c\
+	   ft_strrchr.c\
+	   ft_strtrim.c\
+	   ft_substr.c\
+	   ft_tolower.c\
+	   ft_toupper.c\
 
 OBJS = ${SRCS:.c=.o}
 

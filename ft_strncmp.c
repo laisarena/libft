@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 16:51:01 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/27 17:06:44 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/28 18:32:43 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (n--)
 	{
 		if (*s1 != *s2)
-			return (*s1 - *s2);
+			return ((unsigned char)*s1 - (unsigned char)*s2);
 		s1++;
 		s2++;
 	}
