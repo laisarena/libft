@@ -6,7 +6,7 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/01/28 16:57:02 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/01/31 14:29:03 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 
 SRCS = ft_atoi.c\
 	   ft_bzero.c\
+	   ft_calloc.c\
 	   ft_isalnum.c\
 	   ft_isalpha.c\
 	   ft_isascii.c\
@@ -24,6 +25,7 @@ SRCS = ft_atoi.c\
 	   ft_memchr.c\
 	   ft_memcmp.c\
 	   ft_memcpy.c\
+	   ft_memccpy.c\
 	   ft_memmove.c\
 	   ft_memset.c\
 	   ft_putchar_fd.c\
@@ -31,6 +33,7 @@ SRCS = ft_atoi.c\
 	   ft_putnbr_fd.c\
 	   ft_putstr_fd.c\
 	   ft_split.c\
+	   ft_strdup.c\
 	   ft_strchr.c\
 	   ft_strjoin.c\
 	   ft_strlcat.c\

@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 14:38:16 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/23 15:13:04 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/31 14:34:06 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@ void	ft_bzero(void *s, size_t n)
 	char *ptr;
 
 	ptr = s;
-	while (n > 0)
-	{
-		*ptr = 0;
-		ptr++;
-		n--;
-	}
+	while (n-- > 0)
+		*ptr++ = 0;
 }

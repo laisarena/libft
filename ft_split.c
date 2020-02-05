@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/30 17:30:30 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:57:49 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,18 @@ int		ft_substrnbr(char const *s, char c)
 		count = 0;
 	else
 		count = 1;
+	//ft_putnbr_fd(count, 1);
+	//ft_putchar_fd('\n', 1);
 	while (*s)
-		if (*s++ == c && *(s + 1) != c && *(s + 1) != '\0')
+	{
+		//ft_putnbr_fd(count, 1);
+		//ft_putchar_fd('\n', 1);
+		if (*s++ == c && (*(s + 1) != c || *(s + 1) != '\0'))
 			count++;
+		//ft_putnbr_fd(count, 1);
+		//ft_putchar_fd('\n', 1);
+	}
 	return (count);
-}
-
-int		ft_charindex(char const *s, unsigned int start, char c)
-{
-	int	i;
-	
-	i = start;
-	while (s[i])
-		if (s[i++] == c)
-			return (i);
-	return (i);
 }
 
 char	**ft_split(char const *s, char c)
@@ -46,10 +43,12 @@ char	**ft_split(char const *s, char c)
 	int		len;
 
 	n = ft_substrnbr(s, c);
-	if (!(strarray = malloc(sizeof(char *) * n)))
+
+	//ft_putnbr_fd(n, 1);
+	if (!(strarray = malloc(sizeof(char *) * (n + 1))))
 		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < n && n != 0)
 	{
 		if (!(temp = ft_strchr(s, c)))
 				temp = ft_strchr(s, '\0');
@@ -64,5 +63,6 @@ char	**ft_split(char const *s, char c)
 		if (i != n)
 			s = (char const*)temp + 1;
 	}
+	strarray[i] = NULL;
 	return (strarray);
 }

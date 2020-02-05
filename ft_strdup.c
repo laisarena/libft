@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/28 15:43:58 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/31 15:57:15 by lfrasson         ###   ########.fr       */
+/*   Created: 2020/01/31 14:24:25 by lfrasson          #+#    #+#             */
+/*   Updated: 2020/01/31 16:07:00 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_strdup(const char *s1)
 {
-	long	nbr;
-	int		sign;
+	char	*ptr;
+	size_t	len;
 
-	nbr = 0;
-	sign = 1;
-	while (*str && ft_isspace(*str))
-		str++;
-	if (*str == '+')
-		str++;
-	else if (*str == '-')
-	{
-		sign = -1;
-		str++;
-	}
-	while (*str && ft_isdigit(*str))
-		nbr = nbr * 10 + *str++ - '0';
-	return (sign * nbr);
+	len = ft_strlen(s1); 
+	ptr = calloc(len + 1, sizeof(char));
+	ft_strlcpy(ptr, s1, len + 1);
+	return (ptr);
 }

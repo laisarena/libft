@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 14:12:53 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/31 14:20:43 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/31 16:29:21 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void *ptr;
 
-	ptr = malloc(count * size);
+	if (!(ptr = malloc(count * size)))
+		return (0);
+	ft_bzero(ptr, size);
 	return (ptr);
 }

@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:19:15 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/23 10:59:45 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/01/31 14:38:12 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 		sign = -1;
 	l = sign * l;
 	digits = ft_countdigits(l, sign);
-	if (!(str = malloc(sizeof(char) * digits)))
+	if (!(str = calloc(digits, sizeof(char))))
 		return (NULL);
 	while (digits > 0)
 	{
