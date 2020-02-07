@@ -6,7 +6,7 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/01/31 14:29:03 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/02/07 15:30:04 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,23 +48,31 @@ SRCS = ft_atoi.c\
 	   ft_tolower.c\
 	   ft_toupper.c\
 
+SRCS_BONUS = ft_lstnew.c
+
 OBJS = ${SRCS:.c=.o}
 
+OBJS_BONUS = ${SRCS_BONUS:.c=.o}
+
 .c.o:
-	cc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
+	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
 
 ${NAME}: ${OBJS}
 		ar rc ${NAME} ${OBJS}
 		ranlib ${NAME}
 
+bonus:	${NAME} ${OBJS_BONUS}
+		ar rc ${NAME} ${OBJS_BONUS}
+		ranlib ${NAME}
+
 all:	${NAME}
 
 clean:
-		rm -f ${OBJS}
+		rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean:	clean
 		rm -f ${NAME}
 
 re:		fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus
