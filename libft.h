@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 10:20:36 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/07 17:27:56 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/12 15:34:56 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,5 @@ int					ft_isspace(int c);
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
 t_list				*ft_lstnew(void *content);
-
+void				ft_lstadd_front(t_list **lst, t_list *new);
 #endif

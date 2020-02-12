@@ -6,7 +6,7 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/02/07 15:30:04 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/02/12 14:42:28 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRCS = ft_atoi.c\
 	   ft_tolower.c\
 	   ft_toupper.c\
 
-SRCS_BONUS = ft_lstnew.c
+SRCS_BONUS = ft_lstnew.c\
+			 ft_lstadd_front.c
 
 OBJS = ${SRCS:.c=.o}
 
