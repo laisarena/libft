@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:16:47 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/30 11:41:24 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 14:12:07 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	size_t		start;
 	size_t		end;
 
+	if (!s1)
+		return (NULL);
 	ptrs1 = s1;
 	start = 0;
 	while (ft_chrbelongset(set, *ptrs1) && *ptrs1++)
