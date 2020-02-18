@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:02:10 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/23 15:17:42 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 17:02:44 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
-	{
-		ft_putchar_fd(*s, fd);
-		s++;
-	}
+		ft_putchar_fd(*s++, fd);
 }
