@@ -6,15 +6,15 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/05 19:18:41 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 14:17:11 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_substrnbr(char const *s, char c)
+static int	ft_substrnbr(char const *s, char c)
 {
-	int count;
+	int		count;
 
 	if (*s == c)
 		count = 0;
@@ -29,7 +29,7 @@ int		ft_substrnbr(char const *s, char c)
 	return (count);
 }
 
-char	**ft_fillarray(char const *s, char c, char **strarray, int n)
+static char	**ft_fillarray(char const *s, char c, char **strarray, int n)
 {
 	int		i;
 	int		len;
@@ -55,11 +55,13 @@ char	**ft_fillarray(char const *s, char c, char **strarray, int n)
 	return (strarray);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**strarray;
 	int		n;
 
+	if (!s)
+		return (NULL);
 	n = ft_substrnbr(s, c);
 	if (!(strarray = malloc(sizeof(char *) * (n + 1))))
 		return (NULL);
