@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 15:19:15 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/01/31 14:38:12 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 12:20:28 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_countdigits(long l, int sign)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	long	l;
 	int		digits;

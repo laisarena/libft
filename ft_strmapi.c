@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 11:02:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/07 18:12:53 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 13:02:35 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*str;
+	char			*str;
 	unsigned int	i;
 
 	if (!(str = malloc(sizeof(char) * ft_strlen(s))))
