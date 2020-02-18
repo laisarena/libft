@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 12:19:08 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/18 12:20:01 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 18:13:46 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!lst || !f)
+		return ;
 	while (lst->next != NULL)
 	{
 		f(lst->content);

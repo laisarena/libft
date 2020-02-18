@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 15:43:58 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/18 12:18:53 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/18 18:06:35 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	nbr;
+	long	nbr;
 	int		sign;
 
 	nbr = 0;
