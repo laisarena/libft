@@ -6,7 +6,7 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/02/12 16:45:09 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/03/03 15:44:11 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRCS_BONUS = ft_lstnew.c\
 			 ft_lstdelone.c\
 			 ft_lstclear.c\
 			 ft_lstiter.c\
-			ft_lstmap.c
+			 ft_lstmap.c
+
 OBJS = ${SRCS:.c=.o}
 
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
@@ -64,21 +65,21 @@ OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 .c.o:
 	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
 
-${NAME}: ${OBJS}
-		ar rc ${NAME} ${OBJS}
-		ranlib ${NAME}
+$(NAME): ${OBJS}
+		ar rc $(NAME) ${OBJS}
+		ranlib $(NAME)
 
 bonus:	${NAME} ${OBJS_BONUS}
-		ar rc ${NAME} ${OBJS_BONUS}
-		ranlib ${NAME}
+		ar rc $(NAME) ${OBJS_BONUS}
+		ranlib $(NAME)
 
-all:	${NAME}
+all:	$(NAME)
 
 clean:
 		rm -f ${OBJS} ${OBJS_BONUS}
 
 fclean:	clean
-		rm -f ${NAME}
+		rm -f $(NAME)
 
 re:		fclean all
 

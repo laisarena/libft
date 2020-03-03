@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 16:04:05 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/12 16:10:59 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/02/19 11:43:44 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
