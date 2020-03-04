@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/18 14:17:11 by lfrasson         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:57:34 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_substrnbr(char const *s, char c)
 {
 	int		count;
 
-	if (*s == c)
+	if (*s == c || !(*s))
 		count = 0;
 	else
 		count = 1;
