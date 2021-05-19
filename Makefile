@@ -1,12 +1,10 @@
-# **************************************************************************** #
-#                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/09/04 10:34:03 by lfrasson         ###   ########.fr        #
+#    Updated: 2021/05/19 18:45:38 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,25 +57,34 @@ SRCS_BONUS = ft_lstnew.c\
 			 ft_lstiter.c\
 			 ft_lstmap.c
 
-OBJS = ${SRCS:.c=.o}
+CC = gcc
 
-OBJS_BONUS = ${SRCS_BONUS:.c=.o}
+CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	gcc -Wall -Wextra -Werror -I../includes -c $< -o ${<:.c=.o} 
+OBJS = $(SRCS:.c=.o)
 
-$(NAME): ${OBJS}
-		ar rc $(NAME) ${OBJS}
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+
+OBJS_PATH = ./objs/
+
+%.o:	%.c
+	$(CC) $(CFLAGS) -c $< -o $(OBJS_PATH)$@
+
+$(NAME): dir $(OBJS)
+		ar rc $(NAME) $(addprefix $(OBJS_PATH),$(OBJS))
 		ranlib $(NAME)
 
-bonus:	${NAME} ${OBJS_BONUS}
-		ar rc $(NAME) ${OBJS_BONUS}
+bonus:	$(NAME) $(OBJS_BONUS)
+		ar rc $(NAME) $(addprefix $(OBJS_PATH),$(OBJS_BONUS))
 		ranlib $(NAME)
+
+dir:
+		mkdir -p $(OBJS_PATH)
 
 all:	$(NAME)
 
 clean:
-		rm -f ${OBJS} ${OBJS_BONUS}
+		rm -rf $(OBJS_PATH)
 
 fclean:	clean
 		rm -f $(NAME)
