@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:18:24 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/03/04 14:57:34 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/05/03 02:34:15 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,24 +38,26 @@ static char	**ft_fillarray(char const *s, char c, char **strarray, int n)
 	i = 0;
 	while (i < n && n != 0)
 	{
-		if (!(temp = ft_strchr(s, c)))
+		temp = ft_strchr(s, c);
+		if (!temp)
 			temp = ft_strchr(s, '\0');
 		len = temp - s;
 		if (len > 0)
 		{
-			if (!(strarray[i] = malloc(sizeof(char) * (len + 1))))
+			strarray[i] = malloc(sizeof(char) * (len + 1));
+			if (!strarray[i])
 				return (NULL);
 			ft_strlcpy(strarray[i], s, len + 1);
 			i++;
 		}
 		if (i != n)
-			s = (char const*)temp + 1;
+			s = (char const *)temp + 1;
 	}
 	strarray[i] = NULL;
 	return (strarray);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strarray;
 	int		n;
@@ -63,7 +65,8 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	n = ft_substrnbr(s, c);
-	if (!(strarray = malloc(sizeof(char *) * (n + 1))))
+	strarray = malloc(sizeof(char *) * (n + 1));
+	if (!strarray)
 		return (NULL);
 	return (ft_fillarray(s, c, strarray, n));
 }

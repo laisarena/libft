@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_putsubstr_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lfrasson <lfrasson@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/24 14:21:19 by lfrasson          #+#    #+#             */
-/*   Updated: 2021/05/03 02:24:24 by lfrasson         ###   ########.fr       */
+/*   Created: 2020/09/03 17:20:39 by lfrasson          #+#    #+#             */
+/*   Updated: 2020/09/03 17:31:22 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_putsubstr_fd(const char *s, unsigned int start, size_t len, int fd)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n--)
-	{
-		if (*ptr == (unsigned char)c)
-			return (ptr);
-		ptr++;
-	}
-	return (0);
+	if (!s)
+		return ;
+	while (s[start] && start < len)
+		ft_putchar_fd(s[start++], fd);
 }

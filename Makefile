@@ -6,7 +6,7 @@
 #    By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/28 12:16:07 by lfrasson          #+#    #+#              #
-#    Updated: 2020/03/03 15:44:11 by lfrasson         ###   ########.fr        #
+#    Updated: 2020/09/04 10:34:03 by lfrasson         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS = ft_atoi.c\
 	   ft_putendl_fd.c\
 	   ft_putnbr_fd.c\
 	   ft_putstr_fd.c\
+	   ft_putsubstr_fd.c\
 	   ft_split.c\
 	   ft_strdup.c\
 	   ft_strchr.c\
@@ -63,7 +64,7 @@ OBJS = ${SRCS:.c=.o}
 OBJS_BONUS = ${SRCS_BONUS:.c=.o}
 
 .c.o:
-	gcc -Wall -Wextra -Werror -c $< -o ${<:.c=.o}
+	gcc -Wall -Wextra -Werror -I../includes -c $< -o ${<:.c=.o} 
 
 $(NAME): ${OBJS}
 		ar rc $(NAME) ${OBJS}

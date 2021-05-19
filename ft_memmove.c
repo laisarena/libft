@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 17:27:38 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/03/03 15:24:05 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/05/03 02:36:09 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *ptrdst;
-	unsigned char *ptrsrc;
+	unsigned char	*ptrdst;
+	unsigned char	*ptrsrc;
 
 	if (!dst && !src)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/27 16:29:11 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/02/19 12:25:34 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/05/03 02:48:58 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t nlen;
+	size_t	nlen;
 
 	if (!*needle)
 		return ((char *)haystack);

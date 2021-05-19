@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:16:47 by lfrasson          #+#    #+#             */
-/*   Updated: 2020/03/03 16:41:05 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/05/03 02:23:38 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_chrbelongset(char const *set, char c)
 	return (0);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char const	*ptrs1;
 	size_t		start;
