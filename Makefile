@@ -70,7 +70,7 @@ $(OBJDIR)%.o:	%.c
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-		ar rc $@ $<
+		ar rc $@ $(OBJS)
 		ranlib $@
 
 bonus:	$(NAME) $(OBJS_BONUS)
