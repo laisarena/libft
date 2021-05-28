@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:39:47 by lfrasson          #+#    #+#             */
-/*   Updated: 2021/05/03 02:45:26 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/05/27 22:45:36 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ int	ft_lstsize(t_list *lst)
 	size = 1;
 	lst = lst->next;
 	while (lst != NULL)
+	{
 		size++;
+		lst = lst->next;
+	}
 	return (size);
 }
