@@ -12,6 +12,7 @@ NAME := libft.a
 
 CC := gcc
 CFLAGS := -Wall -Wextra -Werror
+CFLAGS += -g
 
 SRCS := ft_atoi.c\
 		ft_atol.c\

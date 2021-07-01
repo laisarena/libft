@@ -6,7 +6,7 @@
 /*   By: lfrasson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 10:20:36 by lfrasson          #+#    #+#             */
-/*   Updated: 2021/05/03 02:53:37 by lfrasson         ###   ########.fr       */
+/*   Updated: 2021/06/03 19:22:22 by lfrasson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+# define FALSE		0
+# define TRUE		1
+# define SUCCESS	0
+# define FAIL		-1
 
 typedef struct s_list
 {
